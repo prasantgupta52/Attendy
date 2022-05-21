@@ -7,42 +7,51 @@ const AddStudent = () => {
   const [lastname, setLastname] = useState("");
   const [roll, setRoll] = useState("");
   const [classs,  setClasss] = useState("");
+  const [section,  setSection] = useState("");
   const [firstname2, setFirstname2] = useState("");
   const [lastname2, setLastname2] = useState("");
   const [roll2, setRoll2] = useState("");
   const [classs2,  setClasss2] = useState("");
+  const [section2,  setSection2] = useState("");
 
   const Add = async (e) => {
     e.preventDefault();
-    if (!firstname || !lastname || !classs || !roll) {
-      alert("First Name , Last Name , Class or Roll cannot be Empty..!");
+    if (!firstname || !lastname || !classs || !roll || !section) {
+      alert("First Name , Last Name , Class , Section or Roll cannot be Empty..!");
     } else {
       let user = JSON.parse(localStorage.getItem("user") || "[]");
       await axios.post(`http://localhost:3001/addstudent/${user._id}`, {
         firstname: firstname,
         lastname: lastname,
         roll: roll,
-        classs: classs
+        classs: classs,
+        section: section
       })
       // .then(props.refresh)
       setFirstname("");
       setLastname("");
       setClasss("");
       setRoll("");
+      setSection("");
     }
   }
   const Remove = async (e) => {
     e.preventDefault();
-    let user = JSON.parse(localStorage.getItem("user") || "[]");
-    if (window.confirm(`This Student will get deleted \r\n\r\nFirst Name: ${firstname2}\r\nLast Name: ${lastname2}\r\nClass: ${classs2}\r\nRoll: ${roll2}`)) {
-      
-      await axios.delete(`http://localhost:3001/removestudent/${user._id}/${firstname2}/${lastname2}/${classs2}/${roll2}`);
-      // props.refresh();
-      setFirstname2("");
-      setLastname2("");
-      setClasss2("");
-      setRoll2("");
-    }
+    if (!firstname2 || !lastname2 || !classs2 || !roll2 || !section2) {
+      alert("First Name , Last Name , Class , Section or Roll cannot be Empty..!");
+    } else {
+      let user = JSON.parse(localStorage.getItem("user") || "[]");
+      if (window.confirm(`This Student will get deleted \r\n\r\nFirst Name: ${firstname2}\r\nLast Name: ${lastname2}\r\nClass: ${classs2}\r\nSection: ${section2}\r\nRoll: ${roll2}`)) {
+        
+        await axios.delete(`http://localhost:3001/removestudent/${user._id}/${firstname2}/${lastname2}/${classs2}/${roll2}/${section2}`);
+        // props.refresh();
+        setFirstname2("");
+        setLastname2("");
+        setClasss2("");
+        setRoll2("");
+        setSection2("");
+      }
+    } 
   }
 
   return (
@@ -64,6 +73,9 @@ const AddStudent = () => {
               <div class="row g-3">
                 <div class="col">
                   <input type="text" value={classs} onChange ={ (e) => {setClasss(e.target.value)}} class="form-control" placeholder="Class" aria-label="Class" />
+                </div>
+                <div class="col">
+                  <input type="text" value={section} onChange ={ (e) => {setSection(e.target.value)}} class="form-control" placeholder="Section" aria-label="Section" />
                 </div>
                 <div class="col">
                   <input type="text" value={roll} onChange ={ (e) => {setRoll(e.target.value)}} class="form-control" placeholder="Roll" aria-label="Roll" />
@@ -91,6 +103,9 @@ const AddStudent = () => {
               <div class="row g-3">
                 <div class="col">
                   <input type="text" value={classs2} onChange ={ (e) => {setClasss2(e.target.value)}} class="form-control" placeholder="Class" aria-label="Class" />
+                </div>
+                <div class="col">
+                  <input type="text" value={section2} onChange ={ (e) => {setSection2(e.target.value)}} class="form-control" placeholder="Section" aria-label="Section" />
                 </div>
                 <div class="col">
                   <input type="text" value={roll2} onChange ={ (e) => {setRoll2(e.target.value)}} class="form-control" placeholder="Roll" aria-label="Roll" />

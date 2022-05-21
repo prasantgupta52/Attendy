@@ -109,6 +109,15 @@
   align-content: center;
 }
 
+.refreshbtn {
+  margin-left: 1rem;
+}
+
+.refresh {
+  display: flex;
+  align-content: center;
+}
+
 .sty {
   background-color: #3de9c1
 }
