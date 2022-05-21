@@ -1,0 +1,110 @@
+import React, {useState} from 'react'
+import axios from 'axios'
+
+const AddStudent = () => {
+
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [roll, setRoll] = useState("");
+  const [classs,  setClasss] = useState("");
+  const [firstname2, setFirstname2] = useState("");
+  const [lastname2, setLastname2] = useState("");
+  const [roll2, setRoll2] = useState("");
+  const [classs2,  setClasss2] = useState("");
+
+  const Add = async (e) => {
+    e.preventDefault();
+    if (!firstname || !lastname || !classs || !roll) {
+      alert("First Name , Last Name , Class or Roll cannot be Empty..!");
+    } else {
+      let user = JSON.parse(localStorage.getItem("user") || "[]");
+      await axios.post(`http://localhost:3001/addstudent/${user._id}`, {
+        firstname: firstname,
+        lastname: lastname,
+        roll: roll,
+        classs: classs
+      })
+      // .then(props.refresh)
+      setFirstname("");
+      setLastname("");
+      setClasss("");
+      setRoll("");
+    }
+  }
+  const Remove = async (e) => {
+    e.preventDefault();
+    let user = JSON.parse(localStorage.getItem("user") || "[]");
+    if (window.confirm(`This Student will get deleted \r\n\r\nFirst Name: ${firstname2}\r\nLast Name: ${lastname2}\r\nClass: ${classs2}\r\nRoll: ${roll2}`)) {
+      
+      await axios.delete(`http://localhost:3001/removestudent/${user._id}/${firstname2}/${lastname2}/${classs2}/${roll2}`);
+      // props.refresh();
+      setFirstname2("");
+      setLastname2("");
+      setClasss2("");
+      setRoll2("");
+    }
+  }
+
+  return (
+    <>
+      <div className="marr container" >
+        <h1>Admin Section</h1>
+        <div className="block container">
+          <div className="add">
+            <h4>Add Student</h4>
+            <form onSubmit={Add}>
+              <div class="row g-3">
+                <div class="col">
+                  <input type="text" value={firstname} onChange ={ (e) => {setFirstname(e.target.value)}} class="form-control" placeholder="First name" aria-label="First name" />
+                </div>
+                <div class="col">
+                  <input type="text" value={lastname} onChange ={ (e) => {setLastname(e.target.value)}} class="form-control" placeholder="Last name" aria-label="Last name" />
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col">
+                  <input type="text" value={classs} onChange ={ (e) => {setClasss(e.target.value)}} class="form-control" placeholder="Class" aria-label="Class" />
+                </div>
+                <div class="col">
+                  <input type="text" value={roll} onChange ={ (e) => {setRoll(e.target.value)}} class="form-control" placeholder="Roll" aria-label="Roll" />
+                </div>
+              </div>
+              <div class="row g-3">
+                <button type="submit" className="btn btn-primary btn-sm" >Add Student</button>
+              </div>
+            </form>
+          </div>
+          <br />
+          <hr />
+          <br />
+          <div className="remove">
+            <h4>Remove Student</h4>
+            <form onSubmit={Remove}>
+              <div class="row g-3">
+                <div class="col">
+                  <input type="text" value={firstname2} onChange ={ (e) => {setFirstname2(e.target.value)}} class="form-control" placeholder="First name" aria-label="First name" />
+                </div>
+                <div class="col">
+                  <input type="text" value={lastname2} onChange ={ (e) => {setLastname2(e.target.value)}} class="form-control" placeholder="Last name" aria-label="Last name" />
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col">
+                  <input type="text" value={classs2} onChange ={ (e) => {setClasss2(e.target.value)}} class="form-control" placeholder="Class" aria-label="Class" />
+                </div>
+                <div class="col">
+                  <input type="text" value={roll2} onChange ={ (e) => {setRoll2(e.target.value)}} class="form-control" placeholder="Roll" aria-label="Roll" />
+                </div>
+              </div>
+              <div class="row g-3">
+                <button type="submit" className="btn btn-primary btn-sm" >Remove Student</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default AddStudent
