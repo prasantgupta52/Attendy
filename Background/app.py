@@ -7,20 +7,37 @@ import numpy as np
 import cv2, queue, threading, time
 import requests, os, re
 
+USER_ID = "6287ab502987a19543c51d63"
+
+FILE_PATH = os.path.dirname(os.path.realpath(__file__))
+
 app = Flask(__name__)
 camera = cv2.VideoCapture(0)
 
 Known_Students_encodings = []
-Known_Students_names = []
 Known_Students_filenames = []
+Known_Students_names = []
+Known_Students_firstnames = []
+Known_Students_lastnames = []
+Known_Students_classs = []
+Known_Students_rolls = []
+Known_Students_sections = []
+nome = []
 
-for (dirpath, dirnames, filenames) in os.walk('C:/Users/PRASANT GUPTA/OneDrive/Desktop/photos/train'):
+for (dirpath, dirnames, filenames) in os.walk(f"{FILE_PATH}/photo_of_students"):
     Known_Students_filenames.extend(filenames)
     break
 
 for filename in Known_Students_filenames:
-    face = face_recognition.load_image_file('C:/Users/PRASANT GUPTA/OneDrive/Desktop/photos/train/' + filename)
-    Known_Students_names.append(re.sub("[0-9]",'', filename[:-4]))
+    file_name = os.path.basename(filename)
+    file_name_ext = os.path.splitext(file_name)[0]
+    lit = file_name_ext.split("_")
+    face = face_recognition.load_image_file(f"{FILE_PATH}/photo_of_students/" + filename)
+    Known_Students_firstnames.append(lit[0])
+    Known_Students_lastnames.append(lit[1])
+    Known_Students_classs.append(lit[2])
+    Known_Students_sections.append(lit[3])
+    Known_Students_rolls.append(lit[4])
     Known_Students_encodings.append(face_recognition.face_encodings(face)[0])
 
 Student_face_locations = []
@@ -48,12 +65,30 @@ def generate_frames():
               best_match_index = np.argmin(face_distances)
 
               if matches[best_match_index]:
-                name = Known_Students_names[best_match_index]
-                json_to_export['name'] = name
-                json_to_export['hour'] = f'{time.localtime().tm_hour}:{time.localtime().tm_min}'
-                json_to_export['date'] = f'{time.localtime().tm_year}-{time.localtime().tm_mon}-{time.localtime().tm_mday}'
-                json_to_export['picture_array'] = frame.tolist()
-
+                firstname = Known_Students_firstnames[best_match_index]
+                lastname = Known_Students_lastnames[best_match_index]
+                classs = Known_Students_classs[best_match_index]
+                section = Known_Students_sections[best_match_index]
+                roll = Known_Students_rolls[best_match_index]
+                name = f'{firstname} {lastname}'
+                json_to_export['firstname'] = firstname
+                json_to_export['lastname'] = lastname
+                json_to_export['classs'] = classs
+                json_to_export['section'] = section
+                json_to_export['roll'] = roll
+                json_to_export['time'] = f'{time.localtime().tm_hour}:{time.localtime().tm_min}'
+                dd = time.localtime().tm_mday
+                mm = time.localtime().tm_mon
+                if(dd<10):
+	                dd='0'+str(dd)
+                if(mm<10):
+	                mm='0'+str(mm)
+                json_to_export['date'] = f'{dd}-{mm}-{time.localtime().tm_year}'
+                r = requests.get(url=f"http://localhost:3001/findstudent/{USER_ID}", json=json_to_export)
+                datas = r.json()
+                if datas==[]:
+                    ro = requests.post(url=f"http://localhost:3001/attendance/{USER_ID}", json=json_to_export)
+                    
               Student_face_names.append(name)
 
             for (top, right, bottom, left), name in zip(Student_face_locations, Student_face_names):
@@ -80,4 +115,4 @@ def video():
     return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == "__main__":
-    app.run(debug=True ,host='127.0.0.1',port=80)
+    app.run(debug=True ,host='127.0.0.1',port=5000)
