@@ -435,11 +435,6 @@ const SearchBar = () => {
             <input type="text" value={lastname} onChange ={ (e) => {setLastname(e.target.value)}} class="form-control" placeholder="Last name" aria-label="Last name" />
           </div>
           <div class="col">
-            <input type="text" value={date} onChange ={ (e) => {setDate(e.target.value)}} class="form-control" placeholder="DD-MM-YYYY" aria-label="Date" />
-          </div>
-        </div>
-        <div class="row g-3">
-          <div class="col">
             <input type="text" value={classs} onChange ={ (e) => {setClasss(e.target.value)}} class="form-control" placeholder="Class" aria-label="Class" />
           </div>
           <div class="col">
@@ -447,6 +442,9 @@ const SearchBar = () => {
           </div>
           <div class="col">
             <input type="text" value={roll} onChange ={ (e) => {setRoll(e.target.value)}} class="form-control" placeholder="Roll" aria-label="Roll" />
+          </div>
+          <div class="col">
+            <input type="text" value={date} onChange ={ (e) => {setDate(e.target.value)}} class="form-control" placeholder="DD-MM-YYYY" aria-label="Date" />
           </div>
         </div>
         <div class="row g-3">

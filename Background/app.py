@@ -7,7 +7,7 @@ import numpy as np
 import cv2, queue, threading, time
 import requests, os, re
 
-USER_ID = "6287ab502987a19543c51d63"
+USER_ID = input("Enter Your User ID..!\n")
 
 FILE_PATH = os.path.dirname(os.path.realpath(__file__))
 
@@ -115,4 +115,4 @@ def video():
     return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == "__main__":
-    app.run(debug=True ,host='127.0.0.1',port=5000)
+    app.run(debug=False ,host='127.0.0.1',port=5000)

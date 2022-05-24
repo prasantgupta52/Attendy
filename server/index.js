@@ -1917,17 +1917,6 @@ app.get('/get_attendance_by_firstname_lastname_classs_section_roll_date/:userid/
   }
 })
 
-
-
-
-
-
-
-
-
-
-
-
 app.listen(process.env.PORT || 3001, () => {
   console.log(`server running on port http://localhost:3001 ..!`);
 })
