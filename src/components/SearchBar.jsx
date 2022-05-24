@@ -450,7 +450,7 @@ const SearchBar = () => {
         <div class="row g-3">
           <button type="submit" className="btn btn-primary btn-sm" onClick={refreshy}>Search</button>
         </div>
-      <div className='block container'>
+      <div className='block3 container'>
         <div class="row row-cols-1 row-cols-md-3 g-4">
         {studentslineup.length === 0 ? (
           <div>No Students Data</div>
