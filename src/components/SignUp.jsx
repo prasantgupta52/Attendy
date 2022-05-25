@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
+import HeaderPage from './HeaderPage'
 import url1 from '../url';
+import signupic from '../images/Signup.png'
 
 const SignUp = (props) => {
 
@@ -84,22 +86,9 @@ const SignUp = (props) => {
 
   return (
     <>
-    {/* <nav class="navbar navbar-expand-lg sty">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
-            <a class="nav-link disabled">Disabled</a>
-          </div>
-        </div>
-      </div>
-    </nav> */}
+    <HeaderPage loggedIn={props.loggedIn} setLoggedIn={props.setLoggedIn} userInfo={props.userInfo} setUserInfo={props.setUserInfo} />
+    <div className="Signup">
+    <div className="photo"><img src={signupic} className="signupic"/></div>
     <div className="full container">
       <h1>
         SignUp
@@ -125,6 +114,7 @@ const SignUp = (props) => {
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+    </div>
     </div>
     </>
   )

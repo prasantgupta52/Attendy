@@ -67,14 +67,9 @@
 
 .block3 {
   margin-top: 1rem;
-  max-height: 61.5vh;
+  max-height: 61.6vh;
   overflow: scroll;
-  min-height: 61.5vh;
-}
-
-.webname {
-  font-family: gentona;
-  font-size: 3rem;
+  min-height: 61.6vh;
 }
 
 .attendy {
@@ -102,10 +97,6 @@
   align-items: center;
 }
 
-.name {
-  margin-left: 1rem;
-}
-
 .profilenav {
   margin-left: auto;
   display: flex;  
@@ -130,6 +121,26 @@
   justify-content: center;
 }
 
+.profilepic:hover {
+  background-color: rgb(245, 146, 232);
+}
+
+.picpic {
+  background-color: #00CFC7;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  margin-top: 2rem;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-left-mar {
+  margin-left: 2rem;
+}
+
 .sidenav  {
   background-color: rgb(48, 47, 50);
 }
@@ -140,7 +151,7 @@
 
 .mk {
   /* width: 15%; */
-  width: 200px;
+  width: 2000px;
 }
 
 .nav, .flex-column, .nav-pills, .me-3 {
@@ -151,12 +162,11 @@
 }
 
 .full {
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  max-width: 50%;
-  /* margin-top: 1em;
-  margin-bottom: 1em; */
+  max-width: 30%;
+  margin-top:1rem;
+  /* margin-top: 1rem; */
   /* flex-direction: row; */
   justify-content: center;
   align-content: center;
@@ -189,3 +199,142 @@ h4 {
   display: flex;
   justify-content: center;
 }
+
+.menu {
+  position: absolute;
+  top: 95px;
+  right: 10px;
+  padding: 10px 20px;
+  background: rgb(255, 255, 255); 
+  /* width: 300px; */
+
+  box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  box-shadow:0px 0px 10px -1px rgb(0, 207, 199);
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background: rgb(255, 255, 255);
+  transform: rotate(45deg);
+}
+
+.menu ul li {
+  list-style: none;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ppname {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.profhr {
+  width: 90%;
+}
+
+.btnout {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  box-shadow: 0px 0px 10px 1px rgb(0,207,199);
+}
+
+.btnout:hover {
+  box-shadow: 0px 0px 10px 1px rgb(245, 146, 232);
+}
+
+.headerpage {
+  margin-bottom: 1rem;
+}
+
+.Signup {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.Signin {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.signupic {
+  width: 100%;
+}
+
+.photo {
+  display: flex;
+  align-self: center;
+  width: 50%;
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.Signup>.photo, .Signin>.full {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  
+  /* background: #333; */
+  padding: 30px;
+}
+
+.Signin>.photo, .Signup>.full {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1s ease-out 0s 1 slideInFromRight;
+  
+  /* background: #333; */
+  padding: 30px;
+}
+/*
+.Signin::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  bottom: -100;
+  left: 100; 
+  right: 100; 
+  background: 00CFC7;
+  height: 100rem;
+  width: 100rem;
+  border-radius: 50%;
+}*/

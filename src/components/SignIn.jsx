@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+import HeaderPage from './HeaderPage'
+import signupic from '../images/Signin.png'
 import { useNavigate } from 'react-router-dom'
 
 const SignIn = (props) => {
@@ -49,6 +51,8 @@ const SignIn = (props) => {
 
   return (
     <>
+    <HeaderPage loggedIn={props.loggedIn} setLoggedIn={props.setLoggedIn} userInfo={props.userInfo} setUserInfo={props.setUserInfo} />
+    <div className="Signin">
     <div className='full container'>
       <h1>
         SignIn
@@ -62,6 +66,7 @@ const SignIn = (props) => {
           <input type="email" value={username} onChange={(e) => { setUsername(e.target.value) }} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
           <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
+        <br />
         <div className="form-group">
           <label for="exampleInputPassword1">
             <h4>Password</h4>
@@ -71,6 +76,8 @@ const SignIn = (props) => {
         <br />
         <button type="submit" className="btn btn-primary btn-lg" >Submit</button>
       </form>
+    </div>
+    <div className="photo"><img src={signupic} className="signupic"/></div>
     </div>
     </>
   )

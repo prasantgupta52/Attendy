@@ -57,7 +57,7 @@ const AddStudent = () => {
   return (
     <>
       <div className="marr container" >
-        <h1>Admin Section</h1>
+        <h1 className='refresh header-left-mar'>Admin Section</h1>
         <div className="block container">
           <div className="add">
             <h4>Add Student</h4>
@@ -86,7 +86,6 @@ const AddStudent = () => {
               </div>
             </form>
           </div>
-          <br />
           <hr />
           <br />
           <div className="remove">

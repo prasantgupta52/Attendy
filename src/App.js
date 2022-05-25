@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/" element={<SignUp loggedIn={loggedIn} setLoggedIn={setLoggedIn} userInfo={userInfo} setUserInfo={setUserInfo} />} />
           <Route exact path="/SignIn" element={<SignIn loggedIn={loggedIn} setLoggedIn={setLoggedIn} userInfo={userInfo} setUserInfo={setUserInfo} />} />
           <Route exact path="/Home/:email" element={<Home loggedIn={loggedIn} setLoggedIn={setLoggedIn} userInfo={userInfo} setUserInfo={setUserInfo} />} />
-        </Routes> 
+        </Routes>
       </Router>    
     </>
   );

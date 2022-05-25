@@ -3,21 +3,14 @@ import SearchBar from './SearchBar';
 import StudentsList from './StudentsList';
 import TodaysAttendance from './TodaysAttendance';
 import AddStudent from './AddStudent.jsx';
-import attendy from '../ATTENDY.jpg'
+import Header from './Header';
 
-const Home = () => {
-
-  let user = JSON.parse(localStorage.getItem("user") || "[]");
-  const firstlett = user.username[0];
-  const fullname = user.username.toUpperCase();
-  const capitalalphaname = firstlett.toUpperCase();
+const Home = (props) => {
 
   return (
+
     <div>
-      <nav className="profile">
-        <div className='name webname'><img src={attendy} alt="" className='attendy'/></div>
-        <div className="profilenav"><div className="pname">Welcome, {fullname}</div><div className='profilepic'>{capitalalphaname}</div></div>
-      </nav>
+      <Header loggedIn={props.loggedIn} setLoggedIn={props.setLoggedIn} userInfo={props.userInfo} setUserInfo={props.setUserInfo} />
       <div class="d-flex align-items-start sidenav">
         <div class="nav flex-column nav-pills mk bg-new1" id="v-pills-tab" role="tablist" aria-orientation="vertical">
           <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Student List</button>

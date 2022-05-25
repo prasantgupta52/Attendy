@@ -425,7 +425,7 @@ const SearchBar = () => {
 
   return (
     <div className="marr container">
-      <h1 className='refresh'>Search For Attendance
+      <h1 className='refresh header-left-mar'>Search For Attendance
       </h1>
         <div class="row g-3">
           <div class="col">
