@@ -91,28 +91,29 @@ const SignUp = (props) => {
     <div className="photo"><img src={signupic} className="signupic"/></div>
     <div className="full container">
       <h1>
-        SignUp
+        Sign-Up
       </h1>
       <br />
       <form onSubmit={create}>
         <div class="mb-3">
-          <label for="examplename" class="form-label">Name</label>
+          <label for="examplename" class="form-label"><h5>Name</h5></label>
           <input type="text" value={name} onChange={(e) => {setName(e.target.value)}} placeholder="Your Name Here" class="form-control" id="examplename" />
         </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <label for="exampleInputEmail1" class="form-label"><h5>Email address</h5></label>
           <input type="email" value={username} onChange={(e) => {setUsername(e.target.value)}} placeholder="Your Email Here" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
           <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <label for="exampleInputPassword1" class="form-label"><h5>Password</h5></label>
           <input type="password" value={password} onChange={(e) => {setPassword(e.target.value)}} placeholder='Enter your Password' class="form-control" id="exampleInputPassword1" />
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+          <label for="exampleInputPassword2" class="form-label"><h5>Confirm Password</h5></label>
           <input type="password" value={cpassword} onChange={(e) => {setCpassword(e.target.value)}} placeholder='Confirm your Password' class="form-control" id="exampleInputPassword2" />
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <br />
+        <button type="submit" class="btn btn-lg btnhigh btnlogin">Submit</button>
       </form>
     </div>
     </div>

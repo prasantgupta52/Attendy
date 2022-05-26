@@ -8,8 +8,8 @@ const Students = (props) => {
         <div class="card">
           {/* <img src={props.t} class="card-img-top" alt="..." /> */}
           <div class="card-body">
-            <h5 class="card-title">Name : {props.student.FirstName} {props.student.LastName}</h5>
-            <p class="card-text">Class : {props.student.Class}<br /> Section : {props.student.Section}<br />Roll : {props.student.Roll}<br /></p>
+            <h5 class="card-title"><i>{props.student.FirstName} {props.student.LastName}</i></h5>
+            <p class="card-text"><b>Class : </b>{props.student.Class}<br /><b> Section : </b>{props.student.Section}<br /><b>Roll : </b>{props.student.Roll}<br /></p>
           </div>
         </div>
       </div>

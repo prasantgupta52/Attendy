@@ -7,7 +7,10 @@ import numpy as np
 import cv2, queue, threading, time
 import requests, os, re
 
-USER_ID = input("Enter Your User ID..!\n")
+Emailid = input("Enter Your Email ID..!\n")
+rr = requests.get(url=f"http://localhost:3001/fetchaccount/{Emailid}")
+USER_ID = rr.json()[0].get("_id")
+print(f"YOUR USER ID: {USER_ID}")
 
 FILE_PATH = os.path.dirname(os.path.realpath(__file__))
 
@@ -108,7 +111,7 @@ def generate_frames():
 
 @app.route('/')
 def index():
-    return render_template('pika.html')
+    return render_template('main.html')
 
 @app.route('/video')
 def video():

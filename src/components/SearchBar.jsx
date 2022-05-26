@@ -448,7 +448,7 @@ const SearchBar = () => {
           </div>
         </div>
         <div class="row g-3">
-          <button type="submit" className="btn btn-primary btn-sm" onClick={refreshy}>Search</button>
+          <button type="submit" className="btn btn-sm btnhigh" onClick={refreshy}>Search</button>
         </div>
       <div className='block3 container'>
         <div class="row row-cols-1 row-cols-md-3 g-4">

@@ -82,7 +82,7 @@ const AddStudent = () => {
                 </div>
               </div>
               <div class="row g-3">
-                <button type="submit" className="btn btn-primary btn-sm" >Add Student</button>
+                <button type="submit" className="btn btn-sm btnhigh" >Add Student</button>
               </div>
             </form>
           </div>
@@ -111,7 +111,7 @@ const AddStudent = () => {
                 </div>
               </div>
               <div class="row g-3">
-                <button type="submit" className="btn btn-primary btn-sm" >Remove Student</button>
+                <button type="submit" className="btn btn-sm btnhigh" >Remove Student</button>
               </div>
             </form>
           </div>

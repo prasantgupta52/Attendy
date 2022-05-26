@@ -180,6 +180,37 @@ app.get('/today_attendance/:userid', async (req, res) => {
   }
 })
 
+app.get('/findstudent/:userid', async (req, res) => {
+
+  const userid = req.params.userid;
+  const firstname = req.body.firstname;
+  const lastname = req.body.lastname;
+  const classs = req.body.classs;
+  const section = req.body.section;
+  const roll = req.body.roll;
+  const date = req.body.date;
+  
+  var userSchema = attendancedata(`attend${userid}`);
+  try {
+    await userSchema.find({
+      FirstName: firstname,
+      LastName: lastname,
+      Class: classs,
+      Roll: roll,
+      Section: section,
+      Date: date
+    }, (error, result) => {
+      if (error) {
+        res.send(error)
+      } else {
+        res.send(result);
+      }
+    }).clone();
+  } catch (err) {
+    console.log("prblm in dlt " + err);
+  }
+})
+
 app.get('/get_student_list/:userid', async (req, res) => {
 
   const userid = req.params.userid;

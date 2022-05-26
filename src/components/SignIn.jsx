@@ -10,9 +10,9 @@ const SignIn = (props) => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  
   React.useEffect(() => {
-
+    
     if (localStorage.getItem("user") === null) {
     } else {
       let user = JSON.parse(localStorage.getItem("user") || "[]");
@@ -21,7 +21,7 @@ const SignIn = (props) => {
       navigate(`/Home/${user.email}`)
     }
   }, [navigate])
-
+  
   const logIn = async (e) => {
     
     e.preventDefault();
@@ -55,7 +55,7 @@ const SignIn = (props) => {
     <div className="Signin">
     <div className='full container'>
       <h1>
-        SignIn
+        Sign-In
       </h1>
       <br />
       <form onSubmit={logIn}>
@@ -74,7 +74,7 @@ const SignIn = (props) => {
           <input type="password" value={password} onChange={(e) => { setPassword(e.target.value) }} className="form-control" id="exampleInputPassword1" placeholder="Password" />
         </div>
         <br />
-        <button type="submit" className="btn btn-primary btn-lg" >Submit</button>
+        <button type="submit" className="btn btn-lg btnhigh btnlogin" >Submit</button>
       </form>
     </div>
     <div className="photo"><img src={signupic} className="signupic"/></div>
