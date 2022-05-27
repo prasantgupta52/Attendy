@@ -2,6 +2,7 @@ import React, {useState,useEffect} from 'react'
 import axios from 'axios'
 import Attend from './attend'
 import empty from '../images/Empty.png'
+const urlserver = "https://attendy-student.herokuapp.com"
 
 const TodaysAttendance = () => {
 
@@ -10,7 +11,7 @@ const TodaysAttendance = () => {
 
   const refresh = async () => {
     let user = JSON.parse(localStorage.getItem("user") || "[]");
-    await axios.get(`http://localhost:3001/today_attendance/${user._id}`)
+    await axios.get(`${urlserver}/today_attendance/${user._id}`)
     .then((response) => {
       const data = response.data;
       setStudentslineup(data);

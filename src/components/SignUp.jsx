@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import HeaderPage from './HeaderPage'
-import url1 from '../url';
 import signupic from '../images/Signup.png'
+const urlserver = "https://attendy-student.herokuapp.com"
 
 const SignUp = (props) => {
 
@@ -25,7 +25,7 @@ const SignUp = (props) => {
   }, [navigate])
 
   const createaccount = async () => {
-    await axios.post(`http://localhost:3001/insertuser`, {
+    await axios.post(`${urlserver}/insertuser`, {
       username: name,
       email: username,
       password: password,
@@ -33,7 +33,7 @@ const SignUp = (props) => {
     })
       .then(
         setTimeout(async () => {
-          await axios.get(`http://localhost:3001/fetchaccount/${username}`)
+          await axios.get(`${urlserver}/fetchaccount/${username}`)
             .then(async (response) => {
               // console.log(response);
               let userdetail = response.data[0];
@@ -62,7 +62,7 @@ const SignUp = (props) => {
       alert("Please Ensure that every Field is filled none of em is Empty");
     } else {
       if (password === cpassword) {
-        await axios.get(`http://localhost:3001/fetchaccount/${username}`)
+        await axios.get(`${urlserver}/fetchaccount/${username}`)
           .then(async (response) => {
             try {
               const tempemail = response.data[0];

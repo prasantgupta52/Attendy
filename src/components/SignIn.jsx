@@ -3,6 +3,7 @@ import axios from 'axios'
 import HeaderPage from './HeaderPage'
 import signupic from '../images/Signin.png'
 import { useNavigate } from 'react-router-dom'
+const urlserver = "https://attendy-student.herokuapp.com"
 
 const SignIn = (props) => {
 
@@ -25,7 +26,7 @@ const SignIn = (props) => {
   const logIn = async (e) => {
     
     e.preventDefault();
-    await axios.get(`http://localhost:3001/fetchaccount/${username}`)
+    await axios.get(`${urlserver}/fetchaccount/${username}`)
       .then(async (response) => {
         try {
           const tempemail = response.data[0];

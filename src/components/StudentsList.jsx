@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import '../App.css'
 import Students from './Students.jsx'
+const urlserver = "https://attendy-student.herokuapp.com"
 
 
 const StudentsList = () => {
@@ -11,7 +12,7 @@ const StudentsList = () => {
 
   const refresh = async () => {
     let user = JSON.parse(localStorage.getItem("user") || "[]");
-    await axios.get(`http://localhost:3001/get_student_list/${user._id}`)
+    await axios.get(`${urlserver}/get_student_list/${user._id}`)
     .then((response) => {
       const data = response.data;
       setStudentslineup(data);

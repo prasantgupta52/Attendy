@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+const urlserver = "https://attendy-student.herokuapp.com"
 
 const AddStudent = () => {
 
@@ -20,7 +21,7 @@ const AddStudent = () => {
       alert("First Name , Last Name , Class , Section or Roll cannot be Empty..!");
     } else {
       let user = JSON.parse(localStorage.getItem("user") || "[]");
-      await axios.post(`http://localhost:3001/addstudent/${user._id}`, {
+      await axios.post(`${urlserver}/addstudent/${user._id}`, {
         firstname: firstname,
         lastname: lastname,
         roll: roll,
@@ -43,7 +44,7 @@ const AddStudent = () => {
       let user = JSON.parse(localStorage.getItem("user") || "[]");
       if (window.confirm(`This Student will get deleted \r\n\r\nFirst Name: ${firstname2}\r\nLast Name: ${lastname2}\r\nClass: ${classs2}\r\nSection: ${section2}\r\nRoll: ${roll2}`)) {
         
-        await axios.delete(`http://localhost:3001/removestudent/${user._id}/${firstname2}/${lastname2}/${classs2}/${roll2}/${section2}`);
+        await axios.delete(`${urlserver}/removestudent/${user._id}/${firstname2}/${lastname2}/${classs2}/${roll2}/${section2}`);
         // props.refresh();
         setFirstname2("");
         setLastname2("");

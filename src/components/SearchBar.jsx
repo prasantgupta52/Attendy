@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import axios from 'axios'
 import Attend from './attend'
+const urlserver = "https://attendy-student.herokuapp.com"
 
 
 const SearchBar = () => {
@@ -19,385 +20,385 @@ const SearchBar = () => {
     let user = JSON.parse(localStorage.getItem("user") || "[]");
 
     if (!firstname&&!lastname&&!roll&&!section&&!classs&&!date) {
-      await axios.get(`http://localhost:3001/get_attendance/${user._id}`)
+      await axios.get(`${urlserver}/get_attendance/${user._id}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!lastname&&!roll&&!section&&!classs&&!date) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname/${user._id}/${firstname}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname/${user._id}/${firstname}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!firstname&&!roll&&!section&&!classs&&!date) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname/${user._id}/${lastname}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname/${user._id}/${lastname}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!firstname&&!lastname&&!section&&!classs&&!date) {
-      await axios.get(`http://localhost:3001/get_attendance_by_roll/${user._id}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_roll/${user._id}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!firstname&&!lastname&&!section&&!roll&&!date) {
-      await axios.get(`http://localhost:3001/get_attendance_by_class/${user._id}/${classs}`)
+      await axios.get(`${urlserver}/get_attendance_by_class/${user._id}/${classs}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!firstname&&!lastname&&!roll&&!classs&&!date) {
-      await axios.get(`http://localhost:3001/get_attendance_by_section/${user._id}/${section}`)
+      await axios.get(`${urlserver}/get_attendance_by_section/${user._id}/${section}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!firstname&&!lastname&&!section&&!classs&&!roll) {
-      await axios.get(`http://localhost:3001/get_attendance_by_date/${user._id}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_date/${user._id}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!section&&!classs&&!roll&&!date) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname/${user._id}/${firstname}/${lastname}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname/${user._id}/${firstname}/${lastname}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!lastname&&!classs&&!roll&&!date) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_section/${user._id}/${firstname}/${section}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_section/${user._id}/${firstname}/${section}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!lastname&&!section&&!roll&&!date) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_class/${user._id}/${firstname}/${classs}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_class/${user._id}/${firstname}/${classs}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!lastname&&!section&&!classs&&!date) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_roll/${user._id}/${firstname}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_roll/${user._id}/${firstname}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!lastname&&!roll&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_date/${user._id}/${firstname}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_date/${user._id}/${firstname}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!date&&!firstname&&!roll&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname_classs/${user._id}/${lastname}/${classs}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname_classs/${user._id}/${lastname}/${classs}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!date&&!firstname&&!roll) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname_section/${user._id}/${lastname}/${section}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname_section/${user._id}/${lastname}/${section}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!date&&!firstname&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname_roll/${user._id}/${lastname}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname_roll/${user._id}/${lastname}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!firstname&&!roll&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname_date/${user._id}/${lastname}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname_date/${user._id}/${lastname}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!date&&!firstname&&!lastname&&!roll) {
-      await axios.get(`http://localhost:3001/get_attendance_by_classs_section/${user._id}/${classs}/${section}`)
+      await axios.get(`${urlserver}/get_attendance_by_classs_section/${user._id}/${classs}/${section}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!date&&!firstname&&!lastname&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_classs_roll/${user._id}/${classs}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_classs_roll/${user._id}/${classs}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!firstname&&!lastname&&!roll&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_classs_date/${user._id}/${classs}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_classs_date/${user._id}/${classs}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!date&&!firstname&&!lastname) {
-      await axios.get(`http://localhost:3001/get_attendance_by_section_roll/${user._id}/${section}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_section_roll/${user._id}/${section}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!firstname&&!lastname&&!roll) {
-      await axios.get(`http://localhost:3001/get_attendance_by_section_date/${user._id}/${section}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_section_date/${user._id}/${section}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!firstname&&!lastname&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_roll_date/${user._id}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_roll_date/${user._id}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!date&&!roll&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname_classs/${user._id}/${firstname}/${lastname}/${classs}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname_classs/${user._id}/${firstname}/${lastname}/${classs}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!date&&!roll) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname_section/${user._id}/${firstname}/${lastname}/${section}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname_section/${user._id}/${firstname}/${lastname}/${section}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!date&&!lastname&&!roll) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_classs_section/${user._id}/${firstname}/${classs}/${section}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_classs_section/${user._id}/${firstname}/${classs}/${section}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!date&&!firstname&&!roll) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname_classs_section/${user._id}/${lastname}/${classs}/${section}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname_classs_section/${user._id}/${lastname}/${classs}/${section}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!date&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname_roll/${user._id}/${firstname}/${lastname}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname_roll/${user._id}/${firstname}/${lastname}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!date&&!lastname&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_classs_roll/${user._id}/${firstname}/${classs}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_classs_roll/${user._id}/${firstname}/${classs}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!date&&!firstname&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname_classs_roll/${user._id}/${lastname}/${classs}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname_classs_roll/${user._id}/${lastname}/${classs}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!date&&!lastname) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_section_roll/${user._id}/${firstname}/${section}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_section_roll/${user._id}/${firstname}/${section}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!date&&!firstname) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname_section_roll/${user._id}/${lastname}/${section}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname_section_roll/${user._id}/${lastname}/${section}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!date&&!firstname&&!lastname) {
-      await axios.get(`http://localhost:3001/get_attendance_by_classs_section_roll/${user._id}/${classs}/${section}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_classs_section_roll/${user._id}/${classs}/${section}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!roll&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname_date/${user._id}/${firstname}/${lastname}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname_date/${user._id}/${firstname}/${lastname}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!lastname&&!roll&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_classs_date/${user._id}/${firstname}/${classs}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_classs_date/${user._id}/${firstname}/${classs}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!firstname&&!roll&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname_classs_date/${user._id}/${lastname}/${classs}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname_classs_date/${user._id}/${lastname}/${classs}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!lastname&&!roll) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_section_date/${user._id}/${firstname}/${section}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_section_date/${user._id}/${firstname}/${section}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!firstname&&!roll) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname_section_date/${user._id}/${lastname}/${section}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname_section_date/${user._id}/${lastname}/${section}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!firstname&&!lastname&&!roll) {
-      await axios.get(`http://localhost:3001/get_attendance_by_classs_section_date/${user._id}/${classs}/${section}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_classs_section_date/${user._id}/${classs}/${section}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!lastname&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_roll_date/${user._id}/${firstname}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_roll_date/${user._id}/${firstname}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!firstname&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname_roll_date/${user._id}/${lastname}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname_roll_date/${user._id}/${lastname}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!firstname&&!lastname&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_classs_roll_date/${user._id}/${classs}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_classs_roll_date/${user._id}/${classs}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!firstname&&!lastname) {
-      await axios.get(`http://localhost:3001/get_attendance_by_section_roll_date/${user._id}/${section}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_section_roll_date/${user._id}/${section}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!date&&!roll) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname_classs_section/${user._id}/${firstname}/${lastname}/${classs}/${section}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname_classs_section/${user._id}/${firstname}/${lastname}/${classs}/${section}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!date&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname_classs_roll/${user._id}/${firstname}/${lastname}/${classs}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname_classs_roll/${user._id}/${firstname}/${lastname}/${classs}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!date) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname_section_roll/${user._id}/${firstname}/${lastname}/${section}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname_section_roll/${user._id}/${firstname}/${lastname}/${section}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!date&&!lastname) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_classs_section_roll/${user._id}/${firstname}/${classs}/${section}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_classs_section_roll/${user._id}/${firstname}/${classs}/${section}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!date&&!firstname) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname_classs_section_roll/${user._id}/${lastname}/${classs}/${section}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname_classs_section_roll/${user._id}/${lastname}/${classs}/${section}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!roll&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname_classs_date/${user._id}/${firstname}/${lastname}/${classs}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname_classs_date/${user._id}/${firstname}/${lastname}/${classs}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!roll) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname_section_date/${user._id}/${firstname}/${lastname}/${section}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname_section_date/${user._id}/${firstname}/${lastname}/${section}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!lastname&&!roll) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_classs_section_date/${user._id}/${firstname}/${classs}/${section}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_classs_section_date/${user._id}/${firstname}/${classs}/${section}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!firstname&&!roll) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname_classs_section_date/${user._id}/${lastname}/${classs}/${section}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname_classs_section_date/${user._id}/${lastname}/${classs}/${section}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname_roll_date/${user._id}/${firstname}/${lastname}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname_roll_date/${user._id}/${firstname}/${lastname}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!lastname&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_classs_roll_date/${user._id}/${firstname}/${classs}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_classs_roll_date/${user._id}/${firstname}/${classs}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!firstname&&!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname_classs_roll_date/${user._id}/${lastname}/${classs}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname_classs_roll_date/${user._id}/${lastname}/${classs}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!lastname) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_section_roll_date/${user._id}/${firstname}/${section}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_section_roll_date/${user._id}/${firstname}/${section}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs&&!firstname) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname_section_roll_date/${user._id}/${lastname}/${section}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname_section_roll_date/${user._id}/${lastname}/${section}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!firstname&&!lastname) {
-      await axios.get(`http://localhost:3001/get_attendance_by_classs_section_roll_date/${user._id}/${classs}/${section}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_classs_section_roll_date/${user._id}/${classs}/${section}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!date) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname_classs_section_roll/${user._id}/${firstname}/${lastname}/${classs}/${section}/${roll}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname_classs_section_roll/${user._id}/${firstname}/${lastname}/${classs}/${section}/${roll}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!roll) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname_classs_section_date/${user._id}/${firstname}/${lastname}/${classs}/${section}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname_classs_section_date/${user._id}/${firstname}/${lastname}/${classs}/${section}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!section) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname_classs_roll_date/${user._id}/${firstname}/${lastname}/${classs}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname_classs_roll_date/${user._id}/${firstname}/${lastname}/${classs}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!classs) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname_section_roll_date/${user._id}/${firstname}/${lastname}/${section}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname_section_roll_date/${user._id}/${firstname}/${lastname}/${section}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!lastname) {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_classs_section_roll_date/${user._id}/${firstname}/${classs}/${section}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_classs_section_roll_date/${user._id}/${firstname}/${classs}/${section}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else if (!firstname) {
-      await axios.get(`http://localhost:3001/get_attendance_by_lastname_classs_section_roll_date/${user._id}/${lastname}/${classs}/${section}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_lastname_classs_section_roll_date/${user._id}/${lastname}/${classs}/${section}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
       })
     } else {
-      await axios.get(`http://localhost:3001/get_attendance_by_firstname_lastname_classs_section_roll_date/${user._id}/${firstname}/${lastname}/${classs}/${section}/${roll}/${date}`)
+      await axios.get(`${urlserver}/get_attendance_by_firstname_lastname_classs_section_roll_date/${user._id}/${firstname}/${lastname}/${classs}/${section}/${roll}/${date}`)
       .then((response) => {
         const data = response.data;
         setStudentslineup(data);
