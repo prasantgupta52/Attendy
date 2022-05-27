@@ -4,6 +4,7 @@ import StudentsList from './StudentsList';
 import TodaysAttendance from './TodaysAttendance';
 import AddStudent from './AddStudent.jsx';
 import Header from './Header';
+import Setup from './Setup'
 
 const Home = (props) => {
 
@@ -13,7 +14,7 @@ const Home = (props) => {
       <Header loggedIn={props.loggedIn} setLoggedIn={props.setLoggedIn} userInfo={props.userInfo} setUserInfo={props.setUserInfo} />
       <div class="d-flex align-items-start sidenav">
         <div class="nav flex-column nav-pills mk bg-new1" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <a href='http://127.0.0.1:5000' target='_blank'><button className='camfeed btn'>Live Camera Feed</button></a>
+          <a href='http://127.0.0.1:5000' target='_blank'><button className='camfeed btnfeed'>Live Camera Feed</button></a>
           <button class="nav-link active" id="v-pills-studentList-tab" data-bs-toggle="pill" data-bs-target="#v-pills-studentList" type="button" role="tab" aria-controls="v-pills-studentList" aria-selected="true">Student List</button>
           <button class="nav-link" id="v-pills-TodaysAttendance-tab" data-bs-toggle="pill" data-bs-target="#v-pills-TodaysAttendance" type="button" role="tab" aria-controls="v-pills-TodaysAttendance" aria-selected="false">Today's Attendance</button>
           <button class="nav-link" id="v-pills-SearchBar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-SearchBar" type="button" role="tab" aria-controls="v-pills-SearchBar" aria-selected="false">Search Bar</button>
@@ -25,7 +26,7 @@ const Home = (props) => {
           <div class="tab-pane fade" id="v-pills-TodaysAttendance" role="tabpanel" aria-labelledby="v-pills-TodaysAttendance-tab"><TodaysAttendance /></div>
           <div class="tab-pane fade" id="v-pills-SearchBar" role="tabpanel" aria-labelledby="v-pills-SearchBar-tab"><SearchBar /></div>
           <div class="tab-pane fade" id="v-pills-AdminSection" role="tabpanel" aria-labelledby="v-pills-AdminSection-tab"><AddStudent /></div>
-          <div class="tab-pane fade" id="v-pills-Instruction" role="tabpanel" aria-labelledby="v-pills-Instruction-tab"><AddStudent /></div>
+          <div class="tab-pane fade" id="v-pills-Instruction" role="tabpanel" aria-labelledby="v-pills-Instruction-tab"><Setup /></div>
         </div>
       </div>
     </div>

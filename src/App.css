@@ -45,9 +45,8 @@
 .block {
   margin-top: 1rem;
   max-height: 80vh;
-  overflow: scroll;
+  overflow-y: scroll;
   min-height: 80vh;
-  /* scrollbar-width: 4px; */
   /* scroll-behavior: smooth; */
   /* scrollbar-width: 2px; */
   /* margin: 1rem; */
@@ -396,6 +395,78 @@ h4 {
 .nav-link:hover {
   color: #01ff40;
 }
+
+.btnfeed {
+  border: none;
+  padding-bottom: 0.5em;
+}
+
+.footp {
+  /* bottom: 0; */
+  height: 10%;
+  width: 100%;
+  color: #EAE7E8;
+}
+
+.valign {
+  background-color: #0A0B0D;
+  float: left;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-self: center;
+  align-content: center;
+}
+
+.valignfo {
+  /* align-content: center; */
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.social {
+  display: flex;
+  height: 100%;
+  /* float: right; */
+  align-content: center;
+  align-self: center;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.bisocial {
+  margin: 10px;
+  align-self: center;
+  /* vertical-align: middle; */
+}
+
+.bisocial:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.bisocial:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.bisocial:hover {
+  color: rgb(0, 207, 199);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.bisocial:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
 /* .btnhigh:active {
   background-color: #00CFC7;
   border-color: #00CFC7;

@@ -1,5 +1,5 @@
-from colorsys import rgb_to_hls
-from xmlrpc.client import ProtocolError
+# from colorsys import rgb_to_hls
+# from xmlrpc.client import ProtocolError
 from flask import Flask, render_template, Response
 import cv2
 import face_recognition
@@ -7,10 +7,15 @@ import numpy as np
 import cv2, queue, threading, time
 import requests, os, re
 
-Emailid = input("Enter Your Email ID..!\n")
-rr = requests.get(url=f"http://localhost:3001/fetchaccount/{Emailid}")
+rr=[]
+while (rr==[] or rr.json()==[] ):
+    Emailid = input("\nEnter Your Email ID..!\n")
+    rr = requests.get(url=f"http://localhost:3001/fetchaccount/{Emailid}")
+    if rr.json()==[]:
+        print("\nYour Account Does Not Exist Please Create A Account First or Retry")
+
 USER_ID = rr.json()[0].get("_id")
-print(f"YOUR USER ID: {USER_ID}")
+print(f"\nYOUR USER ID: {USER_ID}\n")
 
 FILE_PATH = os.path.dirname(os.path.realpath(__file__))
 

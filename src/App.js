@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Home from './components/Home';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
+import Footer  from './components/Footer'
 import {
   BrowserRouter as Router,
   Routes,
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/SignIn" element={<SignIn loggedIn={loggedIn} setLoggedIn={setLoggedIn} userInfo={userInfo} setUserInfo={setUserInfo} />} />
           <Route exact path="/Home/:email" element={<Home loggedIn={loggedIn} setLoggedIn={setLoggedIn} userInfo={userInfo} setUserInfo={setUserInfo} />} />
         </Routes>
+        <Footer />
       </Router>    
     </>
   );
