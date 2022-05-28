@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import axios from 'axios'
 import Attend from './attend'
+import SearchEmpty from '../images/SearchEmpty.png'
 const urlserver = "https://attendy-student.herokuapp.com"
 
 
@@ -426,7 +427,7 @@ const SearchBar = () => {
 
   return (
     <div className="marr container">
-      <h1 className='refresh header-left-mar'>Search For Attendance
+      <h1 className='refreshre header-left-mar'><div>Search For Attendance</div><h6 className='result'>{studentslineup.length} Results Found</h6>  
       </h1>
         <div class="row g-3">
           <div class="col">
@@ -454,7 +455,8 @@ const SearchBar = () => {
       <div className='block3 container'>
         <div class="row row-cols-1 row-cols-md-3 g-4">
         {studentslineup.length === 0 ? (
-          <div>No Students Data</div>
+          <div className='cen'><div className='nostud'><h4>" No Attendance Found "</h4></div>
+          <img src={SearchEmpty} alt="empty" className='empty' /></div>
         ) :
           studentslineup.map((student) => {
             return (<Attend student={student}/>)

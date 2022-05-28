@@ -106,10 +106,10 @@ def generate_frames():
               right *= 4
               bottom *= 4
               left *= 4
-              cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
-              cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
+              cv2.rectangle(frame, (left, top), (right, bottom), (199, 207, 0), 2)
+              cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (199, 207, 0), cv2.FILLED)
               font = cv2.FONT_HERSHEY_DUPLEX
-              cv2.putText(frame, name, (left + 6, bottom - 6),font, 1.0, (255, 255, 255), 1)
+              cv2.putText(frame, name, (left + 6, bottom - 6),font, 1.0, (0, 0, 0), 1)
 
             ret, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()

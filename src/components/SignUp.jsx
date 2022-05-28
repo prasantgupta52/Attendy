@@ -59,7 +59,7 @@ const SignUp = (props) => {
   const create = async (e) => {
     e.preventDefault();
     if (!username || !password || !cpassword || !name) {
-      alert("Please Ensure that every Field is filled none of em is Empty");
+      alert("Please Ensure that every Field is filled none of it is Empty");
     } else {
       if (password === cpassword) {
         await axios.get(`${urlserver}/fetchaccount/${username}`)
@@ -67,7 +67,7 @@ const SignUp = (props) => {
             try {
               const tempemail = response.data[0];
               if (tempemail.email === username) {
-                alert("your account already Exists try Signing in to your Account")
+                alert("Your account already Exists try Signing in to your Account")
                 setName("");
                 setUsername("");
                 setPassword("");
@@ -79,7 +79,7 @@ const SignUp = (props) => {
             }
           })
       } else {
-        alert("password and confirm password does not matches please enter password carefully")
+        alert("Password and Confirm Password does not matches please enter password carefully")
       }
     }
   }

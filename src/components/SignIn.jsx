@@ -41,11 +41,11 @@ const SignIn = (props) => {
               setPassword("");
               navigate(`/Home/${tempemail.email}`)
             } else {
-              alert("the password you entered is wrong plzzz enter correct password..!");
+              alert("The password you entered is wrong please Enter correct password..!");
             }
           }
         } catch (err) {
-          alert("your account does not Exists plzz check email or else Sign-Up")
+          alert("Your account does not Exists please check Email or else Sign-Up")
         }
       })
   }

@@ -34,7 +34,8 @@ const TodaysAttendance = () => {
 
   return (
     <div className="marr container">
-      <h1 className='refresh header-left-mar'>Today's Attendance
+      <h1 className='refresh header-left-mar'>
+      <div> Today's Attendance</div>
       <button className="btn refreshbtn btnhigh" onClick={refresh} >
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
           <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
@@ -42,6 +43,7 @@ const TodaysAttendance = () => {
         </svg>
         &nbsp;&nbsp;Refresh
       </button>
+      <h6 className='result'>{studentslineup.length} Students Present Today..</h6>
       </h1>
       <div className='block container'>
         <div class="row row-cols-1 row-cols-md-3 g-4">

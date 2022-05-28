@@ -176,7 +176,19 @@
 
 .refresh {
   display: flex;
+  /* align-items: baseline; */
   align-content: center;
+}
+
+.refreshre {
+  display: flex;
+  align-items: baseline;
+  /* align-content: center; */
+}
+
+.result {
+  margin-top: auto;
+  margin-left: 20px;
 }
 
 .sty {
