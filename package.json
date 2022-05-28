@@ -1,6 +1,6 @@
-{ 
+{
   "name": "attendy",
-  "homepage": "https://github.com/prasantgupta52.github.io/Attendy",
+  "homepage": "http://prasantgupta52.github.io/Attendy",
   "version": "1.0.0",
   "description": "Atendance app",
   "author": "",
@@ -13,6 +13,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "gh-pages": "^4.0.0",
     "mongoose": "^6.3.3",
     "nodemon": "^2.0.16",
     "react": "^18.1.0",
@@ -22,12 +23,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -46,8 +47,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
   }
 }
