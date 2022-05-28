@@ -1,9 +1,10 @@
 {
   "name": "attendy",
-  "homepage": "http://prasantgupta52.github.io/Attendy",
+  "homepage": "https://prasantgupta52.github.io/Attendy",
   "version": "1.0.0",
   "description": "Atendance app",
   "author": "",
+  "main": "index.js",
   "license": "ISC",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -18,7 +19,7 @@
     "nodemon": "^2.0.16",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-router-dom": "^6.3.0",
+    "react-router-dom": "^6.1.1",
     "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },

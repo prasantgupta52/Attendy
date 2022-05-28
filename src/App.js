@@ -19,12 +19,12 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route exact path="/" element={<SignUp loggedIn={loggedIn} setLoggedIn={setLoggedIn} userInfo={userInfo} setUserInfo={setUserInfo} />} />
-          <Route exact path="/SignIn" element={<SignIn loggedIn={loggedIn} setLoggedIn={setLoggedIn} userInfo={userInfo} setUserInfo={setUserInfo} />} />
-          <Route exact path="/Home/:email" element={<Home loggedIn={loggedIn} setLoggedIn={setLoggedIn} userInfo={userInfo} setUserInfo={setUserInfo} />} />
+          <Route exact path="Attendy/" element={<SignUp loggedIn={loggedIn} setLoggedIn={setLoggedIn} userInfo={userInfo} setUserInfo={setUserInfo} />} />
+          <Route exact path="Attendy/SignIn" element={<SignIn loggedIn={loggedIn} setLoggedIn={setLoggedIn} userInfo={userInfo} setUserInfo={setUserInfo} />} />
+          <Route exact path="Attendy/Home/:email" element={<Home loggedIn={loggedIn} setLoggedIn={setLoggedIn} userInfo={userInfo} setUserInfo={setUserInfo} />} />
         </Routes>
-        <Footer />
       </Router>    
+      <Footer />
     </>
   );
 }

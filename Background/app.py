@@ -17,6 +17,12 @@ while (rr==[] or rr.json()==[] ):
         print("\nYour Account Does Not Exist Please Create A Account First or Retry")
 
 USER_ID = rr.json()[0].get("_id")
+PASSWORD = rr.json()[0].get("password")
+passw = input("\nEnter Your Password\n")
+while(PASSWORD!=passw):
+    passw = input("\nWrong Password Enter Your Password Again\n")
+
+
 print(f"\nYOUR USER ID: {USER_ID}\n")
 
 FILE_PATH = os.path.dirname(os.path.realpath(__file__))

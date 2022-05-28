@@ -20,7 +20,7 @@ const SignUp = (props) => {
       let user = JSON.parse(localStorage.getItem("user") || "[]");
       props.setLoggedIn(true);
       props.setUserInfo(user);
-      navigate(`/Home/${user.email}`)
+      navigate(`/Attendy/Home/${user.email}`)
     }
   }, [navigate])
 
@@ -48,7 +48,7 @@ const SignUp = (props) => {
                 setUsername("");
                 setPassword("");
                 setCpassword("");
-                navigate(`/Home/${userdetail.email}`)
+                navigate(`/Attendy/Home/${userdetail.email}`)
               }, 1000)
             });
         }, 1000));
@@ -72,7 +72,7 @@ const SignUp = (props) => {
                 setUsername("");
                 setPassword("");
                 setCpassword("");
-                navigate('/SignIn');
+                navigate('/Attendy/SignIn');
               }
             } catch (err) {
               await createaccount();

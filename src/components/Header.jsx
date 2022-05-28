@@ -13,11 +13,9 @@ const Header = (props) => {
     const togglemenu = document.querySelector('.menu');
     togglemenu.classList.toggle('active')
   }
-
-  let navigate = useNavigate();
-
+  
   const logOut = () => {
-    if (window.confirm("are u sure u want to log out of your account")) {
+    if (window.confirm("Are you sure you want to Sign-out of your Account")) {
       props.setLoggedIn(false);
       props.setUserInfo({});
       localStorage.removeItem("user");
@@ -38,7 +36,7 @@ const Header = (props) => {
           <hr className='profhr' />
           <div className='procontent'><b>Email:</b> {user.email}<br /><b>User ID:</b> {user._id}</div>
           <br />
-          <Link to='/SignIn'><button className='btn btnout' onClick={logOut}><b>Sign-Out</b></button></Link>
+          <Link to='/Attendy/SignIn'><button className='btn btnout' onClick={logOut}><b>Sign-Out</b></button></Link>
         </div>
       </nav>
     </div>

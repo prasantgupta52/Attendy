@@ -25,13 +25,14 @@ const Setup = () => {
             <img src={three} alt="" />
             <p><br />9) After completion type "python app.py" and hit enter wait few second.</p>
             <img src={four} alt="" />
-            <p><br />10) It will ask for your email which you used to Sign-Up / Sign-In to Attendy. Email is case sensitive so type carefully now hit enter and wait few seconds</p>
+            <p><br />10) It will ask for your Email and Password which you used to Sign-Up / Sign-In to Attendy. Email & Password is case sensitive so type carefully now hit enter and wait few seconds</p>
             <p>11) If it shows running on http://127.0.0.1:5000 you are done and your application is running now do not close the powershell window or do not press Ctrl + C as it will stop the application</p>
             <img src={five} alt="" />
             <p><br />12) Now you can use Attendy Seamlessly</p>
             <h3>Other Instruction</h3>
             <p>13) If the "photo_of_students" folder is updated by Admin Please Close the program running in powerShell by pressing Ctrl + C and Re Run The Program using "python app.py" command</p>
             <p>14) All Passwords, Name, Roll, Class, Section e.t.c are Case Sensitive So Please Maintain Case</p>
+            <p>15) In the Search Bar while Searching using Date make Sure Date format is In DD-MM-YYYY also For Roll It Should Be a number</p>
           </h6>
         </div>
       </div>

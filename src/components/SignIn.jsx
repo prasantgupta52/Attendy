@@ -19,7 +19,7 @@ const SignIn = (props) => {
       let user = JSON.parse(localStorage.getItem("user") || "[]");
       props.setLoggedIn(true);
       props.setUserInfo(user);
-      navigate(`/Home/${user.email}`)
+      navigate(`/Attendy/Home/${user.email}`)
     }
   }, [navigate])
 
@@ -39,7 +39,7 @@ const SignIn = (props) => {
               console.log(props.userInfo);
               setUsername("");
               setPassword("");
-              navigate(`/Home/${tempemail.email}`)
+              navigate(`/Attendy/Home/${tempemail.email}`)
             } else {
               alert("The password you entered is wrong please Enter correct password..!");
             }

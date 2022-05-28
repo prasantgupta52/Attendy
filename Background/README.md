@@ -22,7 +22,7 @@ This is the Background Directory Of Attendy
           
 ![four](assets/4.png)
           
-### 8) It will ask for your email which you used to SIgn-Up / Sign-In to Attendy email is case sensitive so type carefully now hit enter and wait few seconds
+### 8) It will ask for your Email and Password which you used to SIgn-Up / Sign-In to Attendy. Email & Password is case sensitive so type carefully now hit enter and wait few seconds
  
 ### 9) If it shows running on http://127.0.0.1:5000 you are done and your application is running now do not close the powershell window or do not press Ctrl + C as it will  stop the application
          
