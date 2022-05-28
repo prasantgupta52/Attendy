@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/prasantgupta52.github.io/Attendy/static/css/main.a5396924.css",
-    "main.js": "/prasantgupta52.github.io/Attendy/static/js/main.18d71952.js",
-    "static/js/787.9191835b.chunk.js": "/prasantgupta52.github.io/Attendy/static/js/787.9191835b.chunk.js",
-    "static/media/1.png": "/prasantgupta52.github.io/Attendy/static/media/1.7f2fca58f69b4a2fad1b.png",
-    "static/media/ATTENDY.jpg": "/prasantgupta52.github.io/Attendy/static/media/ATTENDY.d4b74f0e01a20626f898.jpg",
-    "static/media/2.png": "/prasantgupta52.github.io/Attendy/static/media/2.f4a928f95b0930051110.png",
-    "static/media/Empty.png": "/prasantgupta52.github.io/Attendy/static/media/Empty.5f8ae1f4827cfc20578b.png",
-    "static/media/5.png": "/prasantgupta52.github.io/Attendy/static/media/5.8bcf649028223e06074d.png",
-    "static/media/4.png": "/prasantgupta52.github.io/Attendy/static/media/4.6f51c633e3fe588d13a9.png",
-    "static/media/EmptyList.png": "/prasantgupta52.github.io/Attendy/static/media/EmptyList.d83873b60fa7605634a9.png",
-    "static/media/Signin.png": "/prasantgupta52.github.io/Attendy/static/media/Signin.850e24159b09e3553933.png",
-    "static/media/Signup.png": "/prasantgupta52.github.io/Attendy/static/media/Signup.3226e20840064a5d3126.png",
-    "static/media/SearchEmpty.png": "/prasantgupta52.github.io/Attendy/static/media/SearchEmpty.3feb26036c820833d94d.png",
-    "index.html": "/prasantgupta52.github.io/Attendy/index.html",
-    "main.a5396924.css.map": "/prasantgupta52.github.io/Attendy/static/css/main.a5396924.css.map",
-    "main.18d71952.js.map": "/prasantgupta52.github.io/Attendy/static/js/main.18d71952.js.map",
-    "787.9191835b.chunk.js.map": "/prasantgupta52.github.io/Attendy/static/js/787.9191835b.chunk.js.map"
+    "main.css": "/Attendy/static/css/main.a5396924.css",
+    "main.js": "/Attendy/static/js/main.a9818cb4.js",
+    "static/js/787.9191835b.chunk.js": "/Attendy/static/js/787.9191835b.chunk.js",
+    "static/media/1.png": "/Attendy/static/media/1.7f2fca58f69b4a2fad1b.png",
+    "static/media/ATTENDY.jpg": "/Attendy/static/media/ATTENDY.d4b74f0e01a20626f898.jpg",
+    "static/media/2.png": "/Attendy/static/media/2.f4a928f95b0930051110.png",
+    "static/media/Empty.png": "/Attendy/static/media/Empty.5f8ae1f4827cfc20578b.png",
+    "static/media/5.png": "/Attendy/static/media/5.8bcf649028223e06074d.png",
+    "static/media/4.png": "/Attendy/static/media/4.6f51c633e3fe588d13a9.png",
+    "static/media/EmptyList.png": "/Attendy/static/media/EmptyList.d83873b60fa7605634a9.png",
+    "static/media/Signin.png": "/Attendy/static/media/Signin.850e24159b09e3553933.png",
+    "static/media/Signup.png": "/Attendy/static/media/Signup.3226e20840064a5d3126.png",
+    "static/media/SearchEmpty.png": "/Attendy/static/media/SearchEmpty.3feb26036c820833d94d.png",
+    "index.html": "/Attendy/index.html",
+    "main.a5396924.css.map": "/Attendy/static/css/main.a5396924.css.map",
+    "main.a9818cb4.js.map": "/Attendy/static/js/main.a9818cb4.js.map",
+    "787.9191835b.chunk.js.map": "/Attendy/static/js/787.9191835b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a5396924.css",
-    "static/js/main.18d71952.js"
+    "static/js/main.a9818cb4.js"
   ]
 }
