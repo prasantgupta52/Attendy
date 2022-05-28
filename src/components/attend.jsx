@@ -4,12 +4,12 @@ const Students = (props) => {
 
   return (
     <div>
-      <div class="col">
-        <div class="card">
-          {/* <img src={props.t} class="card-img-top" alt="..." /> */}
-          <div class="card-body">
-            <h5 class="card-title">Name : {props.student.FirstName} {props.student.LastName}</h5>
-            <p class="card-text">Class : {props.student.Class}<br /> Section : {props.student.Section}<br />Roll : {props.student.Roll}<br />Entry Time : {props.student.Time}<br />Date : {props.student.Date}<br /></p>
+      <div className="col">
+        <div className="card">
+          {/* <img src={props.t} className="card-img-top" alt="..." /> */}
+          <div className="card-body">
+            <h5 className="card-title">Name : {props.student.FirstName} {props.student.LastName}</h5>
+            <p className="card-text">Class : {props.student.Class}<br /> Section : {props.student.Section}<br />Roll : {props.student.Roll}<br />Entry Time : {props.student.Time}<br />Date : {props.student.Date}<br /></p>
           </div>
         </div>
       </div>
