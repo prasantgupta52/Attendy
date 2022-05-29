@@ -6,7 +6,7 @@ Attendy is a web based application with AI that automate the attendance record. 
 
 ## Setup Of Application 
 
-To run this application we have to do a required setup please refer to [Setup](Background/README.md) or you can also see the Setup/Instruction Section Of (Attendy)[http://prasantgupta52.github.io/Attendy]
+To run this application we have to do a required setup please refer to [Setup](Background/README.md) in [Backend Directory](Background) or you can also see the Setup/Instruction Section Of [Attendy](http://prasantgupta52.github.io/Attendy)
 
 ## Technologies Used
 
@@ -33,6 +33,20 @@ To run this application we have to do a required setup please refer to [Setup](B
   Last Name <br />
   Class <br />
   Section <br />
-  Roll <br/>
+  Roll <br />
   Date in proper format (DD-MM-YYYY) <br />
   or Even By Entering Multiple Fields Many Combinations are possible
+
+## Made By Prasant Gupta
+
+## Screenshots
+
+![Sign-Up Page](assets/one.png)
+![Sign-In Page](assets/two.png)
+![Live Camera Feed](assets/three.png)
+![Students List](assets/four.png)
+![Today's Attendance](assets/five.png)
+![Search Bar](assets/six.png)
+![Admin Section](assets/seven.png)
+![Profile](assets/eight.png)
+![Setup/Instruction](assets/nine.png)
