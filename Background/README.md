@@ -4,6 +4,12 @@ This is the Background Directory Of Attendy
 
 ### 1) First make sure your device has the [python 3.10](https://www.python.org/downloads/) if not Download and install As the Program is not Compatible with lower version of python
 
+Check the version of python by running command
+
+```bash
+python --version
+```
+
 ### 2) Download the Background Directory From [Github](https://github.com/prasantgupta52/Attendy-Background) Or [Drive](https://drive.google.com/drive/folders/1mM41dwB-6cSmdGtNPo22yY9qO00wE_fI?usp=sharing)
 
 ### 3) After Downloading the Folder unzip the folder and Navigate to the unzipped folder
@@ -14,11 +20,19 @@ This is the Background Directory Of Attendy
           
 ### 5) Click Open PowerShell window here. This opens the PowerShell inside the folder.
 
-### 6) Now type "pip install -r requirements.txt" and hit enter this will take few minutes to complete
-   
+### 6) Now type "pip install -r requirements.txt" and hit enter this will take few minutes to complete. This is a one time Setup So it takes Few minutes Please Wait..
+
+```bash
+pip install -r requirements.txt
+```
+
 ![two](assets/2.png)
    
 ### 7) After completion type "python app.py" and hit enter wait few second.
+
+```bash
+python app.py
+```
           
 ![four](assets/4.png)
           
@@ -29,4 +43,3 @@ This is the Background Directory Of Attendy
 ![five](assets/5.png)
 
 ### 10) Now you can use Attendy Seamlessly
-
