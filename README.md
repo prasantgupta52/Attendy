@@ -6,14 +6,14 @@ Attendy is a web based application with AI that automate the attendance record. 
 
 ## Setup Of Application 
 
-To run this application we have to do a required setup please refer to [Setup](Background/README.md) in [Backend Directory](Background) or you can also see the Setup/Instruction Section Of [Attendy](http://prasantgupta52.github.io/Attendy)
+To run this application we have to do a required setup please refer to README.md in [Background Directory](Background) or you can also see the Setup/Instruction Section Of [Attendy](http://prasantgupta52.github.io/Attendy)
 
 ## Technologies Used
 
 * **Front-End :** *ReactJs* 
 * **Back-End API :** *Express.js* [Backend Directory](server)
 * **Database :** *MongoDB*
-* **AI Model :** [Python application](Background) using [face-recognition](https://face-recognition.readthedocs.io/en/latest/readme.html)
+* **AI Model :** [Python application](Background) using [Face-Recognition](https://face-recognition.readthedocs.io/en/latest/readme.html)
 * **Pakage MAnager** *Node Package Manager (npm) & Preferred Installer Program (pip)*
 <br />
 
@@ -37,16 +37,25 @@ To run this application we have to do a required setup please refer to [Setup](B
   Date in proper format (DD-MM-YYYY) <br />
   or Even By Entering Multiple Fields Many Combinations are possible
 
-## Made By Prasant Gupta
+### Made By Prasant Gupta
 
 ## Screenshots
 
+* Sign-Up Page
 ![Sign-Up Page](assets/one.png)
+* Sign-In Page
 ![Sign-In Page](assets/two.png)
+* Live Camera Feed Page
 ![Live Camera Feed](assets/three.png)
+* Students List
 ![Students List](assets/four.png)
+* Today's Attendance
 ![Today's Attendance](assets/five.png)
+* Search Bar
 ![Search Bar](assets/six.png)
+* Admin Section
 ![Admin Section](assets/seven.png)
+* Profile
 ![Profile](assets/eight.png)
+* Setup/Instruction
 ![Setup/Instruction](assets/nine.png)

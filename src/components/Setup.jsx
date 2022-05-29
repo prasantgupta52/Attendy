@@ -9,7 +9,7 @@ const Setup = () => {
   return (
     <div>
       <div className="marr container">
-        <h1 className='refresh header-left-mar'><div>Setup / Instruction</div><h6 className='result'>Points 1 to 14</h6></h1>
+        <h1 className='refresh header-left-mar'><div>Setup / Instruction</div><h6 className='result'>Points 1 to 15</h6></h1>
         <div className='block container'>
           <h6>
             <p>1) First make sure your device has the <a href="https://www.python.org/downloads/" target="_blank">python 3.10</a> if not please Download and install As the Program is not Compatible with lower version of python</p>

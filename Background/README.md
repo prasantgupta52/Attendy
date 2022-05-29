@@ -4,7 +4,7 @@ This is the Background Directory Of Attendy
 
 ### 1) First make sure your device has the [python 3.10](https://www.python.org/downloads/) if not Download and install As the Program is not Compatible with lower version of python
 
-Check the version of python by running command
+Check the version of python by running command in CLI
 
 ```bash
 python --version
@@ -42,4 +42,8 @@ python app.py
          
 ![five](assets/5.png)
 
-### 10) Now you can use Attendy Seamlessly
+### 10) Every Time You Update the Photos_of_students Folder by adding or removing Students Please Restart the Running Program By <br />
+Stopping pressing (Ctrl + C)<br />
+Starting Running (Python app.py)
+
+### 11) Now you can use Attendy Seamlessly
