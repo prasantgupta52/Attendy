@@ -43,36 +43,53 @@ To run this application we have to do a required setup please refer to README.md
 
 * Sign-Up Page
 <br />
+
 ![Sign-Up Page](assets/one.png)
 <br />
+
 * Sign-In Page
 <br />
+
 ![Sign-In Page](assets/two.png)
 <br />
+
 * Live Camera Feed Page
 <br />
+
 ![Live Camera Feed](assets/three.png)
 <br />
+
 * Students List
 <br />
+
 ![Students List](assets/four.png)
 <br />
+
 * Today's Attendance
 <br />
+
 ![Today's Attendance](assets/five.png)
 <br />
+
 * Search Bar
 <br />
+
 ![Search Bar](assets/six.png)
 <br />
+
 * Admin Section
 <br />
+
 ![Admin Section](assets/seven.png)
 <br />
+
 * Profile
 <br />
+
 ![Profile](assets/eight.png)
 <br />
+
 * Setup/Instruction
 <br />
+
 ![Setup/Instruction](assets/nine.png)
