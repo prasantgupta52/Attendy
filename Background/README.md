@@ -14,7 +14,7 @@ This is the Background Directory Of Attendy
           
 ### 5) Click Open PowerShell window here. This opens the PowerShell inside the folder.
 
-### 6) Now type "pip install -r requirements.txt" and hit enter this will take few minutes to complete
+### 6) Now type "pip install -r requirements.txt" and hit enter this will take few minutes to complete. This is a one time Setup So it takes Few minutes Please Wait..
    
 ![two](assets/2.png)
    
