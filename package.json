@@ -3,7 +3,7 @@
   "homepage": "https://prasantgupta52.github.io/Attendy",
   "version": "1.0.0",
   "description": "Atendance app",
-  "author": "",
+  "author": "prasantgupta52",
   "main": "index.js",
   "license": "ISC",
   "dependencies": {
