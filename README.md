@@ -14,7 +14,7 @@ To run this application we have to do a required setup please refer to README.md
 * **Back-End API :** *Express.js* [Backend Directory](server)
 * **Database :** *MongoDB*
 * **AI Model :** [Python application](Background) using [Face-Recognition](https://face-recognition.readthedocs.io/en/latest/readme.html)
-* **Pakage MAnager** *Node Package Manager (npm) & Preferred Installer Program (pip)*
+* **Pakage Manager** *Node Package Manager (npm) & Preferred Installer Program (pip)*
 <br />
 
 * **Front-End** is Hosted in Github Pages [Attendy](https://prasantgupta52.github.io/Attendy)
