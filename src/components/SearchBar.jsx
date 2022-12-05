@@ -405,6 +405,7 @@ const SearchBar = () => {
           setStudentslineup(data);
         })
     }
+    console.log(date);
     setFirstname("");
     setLastname("");
     setClasss("");
@@ -446,7 +447,7 @@ const SearchBar = () => {
           <input type="text" value={roll} onChange={(e) => { setRoll(e.target.value) }} className="form-control" placeholder="Roll" aria-label="Roll" />
         </div>
         <div className="col">
-          <input type="text" value={date} onChange={(e) => { setDate(e.target.value) }} className="form-control" placeholder="DD-MM-YYYY" aria-label="Date" />
+          <input type="date" value={date} onChange={(e) => { setDate(e.target.value) }} className="form-control" placeholder="DD-MM-YYYY" aria-label="Date" />
         </div>
       </div>
       <div className="row g-3">
