@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Attend from './attend'
 import SearchEmpty from '../images/SearchEmpty.png'
-const urlserver = "https://attendy-student.herokuapp.com"
+const urlserver = "https://attendy.vercel.app"
 
 
 const SearchBar = () => {

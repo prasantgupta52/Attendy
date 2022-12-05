@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-const urlserver = "https://attendy-student.herokuapp.com"
+const urlserver = "https://attendy.vercel.app"
 
 const AddStudent = () => {
 

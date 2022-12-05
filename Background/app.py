@@ -7,7 +7,7 @@ import numpy as np
 import cv2, queue, threading, time
 import requests, os, re
 
-urlserver = "https://attendy-student.herokuapp.com"
+urlserver = "https://attendy.vercel.app"
 
 rr=[]
 while (rr==[] or rr.json()==[] ):

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import '../App.css'
 import Students from './Students.jsx'
 import emptyList from '../images/EmptyList.png'
-const urlserver = "https://attendy-student.herokuapp.com"
+const urlserver = "https://attendy.vercel.app"
 
 
 const StudentsList = () => {

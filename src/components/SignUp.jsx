@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import HeaderPage from './HeaderPage'
 import signupic from '../images/Signup.png'
-const urlserver = "https://attendy-student.herokuapp.com"
+const urlserver = "https://attendy.vercel.app"
 
 const SignUp = (props) => {
 
