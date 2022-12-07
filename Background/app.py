@@ -99,7 +99,7 @@ def generate_frames():
 	                dd='0'+str(dd)
                 if(mm<10):
 	                mm='0'+str(mm)
-                json_to_export['date'] = f'{dd}-{mm}-{time.localtime().tm_year}'
+                json_to_export['date'] = f'{time.localtime().tm_year}-{mm}-{dd}'
                 r = requests.get(url=f"{urlserver}/findstudent/{USER_ID}", json=json_to_export)
                 datas = r.json()
                 if datas==[]:

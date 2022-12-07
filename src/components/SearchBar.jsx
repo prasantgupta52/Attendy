@@ -18,6 +18,7 @@ const SearchBar = () => {
   const [studentslineup, setStudentslineup] = useState([]);
 
   const refresh = async () => {
+
     let user = JSON.parse(localStorage.getItem("user") || "[]");
 
     if (!firstname && !lastname && !roll && !section && !classs && !date) {
@@ -405,7 +406,7 @@ const SearchBar = () => {
           setStudentslineup(data);
         })
     }
-    console.log(date);
+
     setFirstname("");
     setLastname("");
     setClasss("");
@@ -447,7 +448,7 @@ const SearchBar = () => {
           <input type="text" value={roll} onChange={(e) => { setRoll(e.target.value) }} className="form-control" placeholder="Roll" aria-label="Roll" />
         </div>
         <div className="col">
-          <input type="date" value={date} onChange={(e) => { setDate(e.target.value) }} className="form-control" placeholder="DD-MM-YYYY" aria-label="Date" />
+          <input type="date" value={date} onChange={(e) => { setDate(e.target.value) }} className="form-control" placeholder="YYYY-MM-DD" aria-label="Date" />
         </div>
       </div>
       <div className="row g-3">

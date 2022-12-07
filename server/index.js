@@ -162,7 +162,7 @@ app.get('/today_attendance/:userid', async (req, res) => {
   } else{
     ddd=dd;
   }
-  const date = `${ddd}-${mmm}-${yyyy}`;
+  const date = `${yyyy}-${mmm}-${ddd}`;
   
   var userSchema = attendancedata(`attend${userid}`);
   try {
